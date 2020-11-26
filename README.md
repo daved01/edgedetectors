@@ -1,4 +1,4 @@
-# Edge Detectors
+# Edge Detectors in OpenCV
 
 Implementations of the selected image processing algorithms in OpenVC to detect edges, corners and more. These can be used to extract features from images.
 
