@@ -3,9 +3,8 @@
 Implementations of the selected image processing algorithms in OpenVC to detect edges, corners and more. These can be used to extract features from images.
 
 ___________________________________
-## Implemented algorithms
 
-### Sobel filter**
+### Sobel filter
 
 Calculates an approximation of the intensity derivative.
 
