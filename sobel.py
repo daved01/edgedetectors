@@ -23,9 +23,9 @@ dst = cv.Sobel(gray, ddepth, 1, 0) # Gradients in x direction
 img[dst>0.01*dst.max()] = [0,0,255]
 
 # Save image
-cv.imwrite("sobel-example.jpg", img)
+cv.imwrite("images/sobel-example.jpg", img)
 
-# Show image with keypoints
+# Show image with gradients
 cv.imshow('image', img)
 cv.waitKey(0)
 cv.destroyAllWindows()
