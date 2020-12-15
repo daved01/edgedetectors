@@ -23,7 +23,7 @@ dst = cv.Sobel(gray, ddepth, 1, 0) # Gradients in x direction
 img[dst>0.01*dst.max()] = [0,0,255]
 
 # Save image
-cv.imwrite("Harris-example.jpg", img)
+cv.imwrite("sobel-example.jpg", img)
 
 # Show image with keypoints
 cv.imshow('image', img)
