@@ -1,7 +1,7 @@
 '''
-Applies Harris corner derector
+Applies Harris corner detector
 
-Last modified: Nov 24, 2020
+Last modified: Dec 27, 2020
 Author: Dave
 
 Also see: https://docs.opencv.org/master/dc/d0d/tutorial_py_features_harris.html
@@ -12,17 +12,18 @@ import cv2 as cv
 
 img = cv.imread('images/pascal2007-plane.jpg')
 
-# For performance we use a gray scale image
-gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+# For performance we use a greyscale image
+grey = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+grey = np.float32(grey)
 
-# Create a 
-ddepth = -1
-dst = cv.cornerHarris(gray, blockSize=2, ksize=3, k=0.04)
+# Apply Harris operator
+corners = cv.cornerHarris(grey, blockSize=2, ksize=3, k=0.04)
 
-img[dst>0.01*dst.max()] = [0,0,255]
+# Colour selected pixels where corners have been detected in red 
+img[corners>0.01*corners.max()] = [0,0,255]
 
 # Save image
-cv.imwrite("Harris-example.jpg", img)
+cv.imwrite("images/harris-example.jpg", img)
 
 # Show image with keypoints
 cv.imshow('image', img)
