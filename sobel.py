@@ -1,7 +1,7 @@
 '''
 Applies Sobel filter
 
-Last modified: Nov 25, 2020
+Last modified: Dec 27, 2020
 Author: Dave
 
 '''
@@ -9,23 +9,21 @@ Author: Dave
 import numpy as np
 import cv2 as cv
 
+# Example image from the Pascal 2007 dataset
 img = cv.imread('images/pascal2007-plane.jpg')
 
-# For performance we use a gray scale image
-gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+# For performance we use a grey scale image
+grey = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+grey = np.float32(grey)
 
-gray = np.float32(gray)
-
-# Create a 
+# Apply Sobel operator
 ddepth = -1
-dst = cv.Sobel(gray, ddepth, 1, 0) # Gradients in x direction
-
-img[dst>0.01*dst.max()] = [0,0,255]
+imgOut = cv.Sobel(grey, ddepth, 0, 1) # Gradients in y direction
 
 # Save image
-cv.imwrite("images/sobel-example.jpg", img)
+cv.imwrite("images/sobel-example.jpg", imgOut)
 
 # Show image with gradients
-cv.imshow('image', img)
+cv.imshow('image', imgOut)
 cv.waitKey(0)
 cv.destroyAllWindows()
