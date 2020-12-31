@@ -2,6 +2,8 @@
 
 Implementations of the selected image processing algorithms in OpenVC to detect edges, corners and more. These can be used to extract features from images.
 
+For explanations along with the code [post 1](https://www.neuralception.com/featureextractors-1/) and [post 2](https://www.neuralception.com/featureextractors-2/) on my website. A high-level explanation of SIFT and HOG is available [here](https://www.neuralception.com/objectdetection/modelarchitectures/traditionalfeatures/).
+
 ___________________________________
 
 ### Sobel filter
