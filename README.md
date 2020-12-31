@@ -23,6 +23,6 @@ Popular traditional algorithm for object recognition. Identifies scale invariant
 
 ### Histogram of Oriented Gradients
 
-Another traditional image recognition algorithm. Default parameters are tailored to detect pedestrians. Aggregates intensity gradients for image patches in histograms to encode the 
+Another traditional image recognition algorithm. Default parameters are tailored to detect pedestrians. Aggregates pixel intensity gradients for image patches in histograms to encode the boundaries of objects, here pedestrians.
 
 ![hog example](images/hog-example.png "HOG example")
