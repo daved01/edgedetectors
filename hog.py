@@ -1,7 +1,7 @@
 '''
 Applies the steps of HOG to an image, preferrably of size 64x128. Visualizes the intermediate steps as well as the final feature map.
 
-Last modified: Nov 25, 2020
+Last modified: Dec 31, 2020
 Author: Dave
 
 '''
